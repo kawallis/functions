@@ -30,9 +30,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a,b){ //eslint-disable-line
-    var result = a * b;
-    var message = 'The product of ' + a + ' and ' + b + ' is ' + result + '.';
-    return [result,message];
+  var result = a * b;
+  var message = 'The product of ' + a + ' and ' + b + ' is ' + result + '.';
+  return [result,message];
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -58,13 +58,13 @@ function sumAndMultiply(a,b,c){ //eslint-disable-line
   var final_sum = sum(sum_result,c);
   final_sum = final_sum[0];
   var message = a + ' and ' + b + ' and ' + c + ' sum to ' + final_sum + '.';
-  
+
   var mult_result = multiply(a,b);
   mult_result = mult_result[0];
   var final_mult = multiply(mult_result,c);
   final_mult = final_mult[0];
   var first_mess = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + final_mult + '.';
-  
+
   return [final_sum, final_mult, message, first_mess];
 
 }
@@ -91,8 +91,8 @@ function sumArray(testArray){ //eslint-disable-line
   var a = testArray[0];
   var b = testArray[1];
   var c = testArray[2];
-  var sum = sumAndMultiply(a,b,c)[0]; 
-  var message = a.toString() + ',' + b.toString() + ',' + c.toString() + ' was passed in as an array of numbers, and ' + sum + ' is their sum.'
+  var sum = sumAndMultiply(a,b,c)[0];
+  var message = a.toString() + ',' + b.toString() + ',' + c.toString() + ' was passed in as an array of numbers, and ' + sum + ' is their sum.';
   return[sum, message];
 }
 //sumArray(testArray);
@@ -115,10 +115,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(testArray){ //eslint-disable-line
-
+  var a = testArray[0];
+  var b = testArray[1];
+  var c = testArray[2];
+  var product = sumAndMultiply(a,b,c)[1];
+  var message = 'The numbers ' + a.toString() + ',' + b.toString() + ',' + c.toString() + ' have a product of ' + product + '.';
+  return [product,message];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(2,3,4);
+testMultiplyArray(2,3,4);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
